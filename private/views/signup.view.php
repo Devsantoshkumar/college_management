@@ -31,6 +31,9 @@
                     </select>
                  </div>
                  <div class="input-group my-3">
+                   <?php if($mode == 'students') : ?>
+                        <input type="hidden" class="form-control shadow-none" name="rank" value="student">
+                     <?php else: ?>
                     <select name="rank" id="" class="form-control shadow-none">
                      <option <?= get_select("rank","") ?> value="">--Select Rank--</option> 
                      <option <?= get_select("rank","admin") ?> value="admin">Admin</option>
@@ -45,6 +48,7 @@
                      <option <?= get_select("rank","reception") ?> value="reception">Reception</option>
                      <option <?= get_select("rank","teacher") ?> value="teacher">Teacher</option>
                     </select>
+                    <?php endif; ?>
                  </div>
                  <div class="input-group my-3">
                     <input type="text" value="<?= get_val('password') ?>" name="password" class="form-control shadow-none" placeholder="Password">
@@ -55,8 +59,19 @@
                  <div class="input-group">
                     <small>I have already an account <a href="<?=ROOT?>/login" class="text-decoration-none"> Login</a></small>
                  </div>
+                 <div class="d-flex align-items-center">
                  <div class="input-group my-3">
                     <button type="submit" class="btn btn-sm btn-dark fw-bold">Signup</button>
+                 </div>
+                 <?php if($mode == 'students') : ?>
+                  <div class="input-group">
+                    <a href="<?=ROOT?>/students"  class="btn btn-sm btn-danger ms-2 fw-bold">Cancel</a>
+                 </div>
+                 <?php else: ?>
+                  <div class="input-group">
+                    <a href="<?=ROOT?>/users"  class="btn btn-sm btn-danger ms-2 fw-bold">Cancel</a>
+                 </div>
+                 <?php endif; ?>
                  </div>
              </form>
         </div>

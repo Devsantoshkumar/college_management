@@ -10,16 +10,16 @@
           <a class="nav-link active" aria-current="page" href="<?=ROOT?>/">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?=ROOT?>/profile">Profile</a>
+          <a class="nav-link" href="<?=ROOT?>/schools">Schools</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?=ROOT?>/schools">Schools</a>
+          <a class="nav-link" href="<?=ROOT?>/students">Students</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=ROOT?>/users">Staff</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tests</a>
+          <a class="nav-link" href="<?=ROOT?>/classes">Classes</a>
         </li>
         </ul>
         <ul class="navbar-nav ms-auto">

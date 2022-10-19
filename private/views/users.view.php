@@ -2,14 +2,27 @@
 <?php $this->view('includes/nav'); ?>
 
     <div class="container bg-white my-4 shadow-sm">
-        <div class="row p-4">
-            <div class="col">
-            <a href="<?=ROOT?>/signup">
-              <button class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add User</button>
-            </a>
-            </div>
-            <div class="col">
+        <div class="row">
+            <div class="col pt-3 px-4">
             <?php $this->view('includes/breadcrumb',['crumbs'=>$crumbs]); ?>
+            </div>
+            
+        </div>
+        <div class="row pb-3">
+           <div class="col-9">
+                <nav class="navbar navbar-light p-0">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control shadow-none rounded-0" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success rounded-0" type="submit">Search</button>
+                    </form>
+                </div>
+                </nav>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <a href="<?=ROOT?>/signup">
+                <button class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add User</button>
+                </a>
             </div>
         </div>
         <div class="card-group justify-content-center pb-4">
